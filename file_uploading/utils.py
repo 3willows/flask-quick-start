@@ -3,7 +3,7 @@ import csv
 import datefinder
 import pandas as pd
 from docx import Document
-
+import os
 from distutils.log import debug 
 from fileinput import filename 
 from flask import *  
@@ -120,6 +120,12 @@ def everything_function(f):
     extract_numbered_items_to_csv('cleaned.md', 'all_dates.csv')
     extract_dates('all_dates.csv', 'dates_extracted.csv')
     create_word_document_from_csv('dates_extracted.csv', 'output.docx')
+
+    # Remove intermediate files
+    for file in ['cleaned.md', 'all_dates.csv', 'dates_extracted.csv']:
+        if os.path.exists(file):
+            os.remove(file)
+            print(f"Removed {file}")
 
 @app.route('/')   
 def main():
