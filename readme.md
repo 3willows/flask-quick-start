@@ -1,7 +1,7 @@
 # About
 
-- Follow along this [tutorial](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask): api directory
+- api directory: with [tutorial](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask)
 
-- And [this](https://www.geeksforgeeks.org/how-to-upload-file-in-python-flask/): file_uploading
+- file_uploading directory: with [this tutorial](https://www.geeksforgeeks.org/how-to-upload-file-in-python-flask/)
 
-- And this 
+- processing_file: minor modification to the local python function
