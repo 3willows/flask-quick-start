@@ -13,7 +13,8 @@ def success():
     if request.method == 'POST':   
         f = request.files['file'] 
         f.save(f.filename)
-        everything_function()
+        print(f.filename)
+        everything_function(f.filename)
         return render_template("Acknowledgement.html", name = f.filename)   
   
 if __name__ == '__main__':   

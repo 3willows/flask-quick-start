@@ -115,8 +115,8 @@ def create_word_document_from_csv(input_file, output_file):
 
     print(f"Word document '{output_file}' created successfully.")
 
-def everything_function():
-    clean_markdown_document('example.md', 'cleaned.md')
+def everything_function(f):
+    clean_markdown_document(f, 'cleaned.md')
     extract_numbered_items_to_csv('cleaned.md', 'all_dates.csv')
     extract_dates('all_dates.csv', 'dates_extracted.csv')
     create_word_document_from_csv('dates_extracted.csv', 'output.docx')
