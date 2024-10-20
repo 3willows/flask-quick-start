@@ -1,1 +1,6 @@
+# For Apple computers
 .DS_Store
+
+# SQLite
+__pycache__
+instance
