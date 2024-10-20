@@ -1,5 +1,6 @@
 from distutils.log import debug 
-from fileinput import filename 
+from fileinput import filename
+from utils import everything_function 
 from flask import *  
 app = Flask(__name__)   
   
@@ -11,7 +12,8 @@ def main():
 def success():   
     if request.method == 'POST':   
         f = request.files['file'] 
-        f.save(f.filename)   
+        f.save(f.filename)
+        everything_function()
         return render_template("Acknowledgement.html", name = f.filename)   
   
 if __name__ == '__main__':   
